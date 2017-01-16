@@ -28,8 +28,7 @@ body {font-family: "Roboto", sans-serif; position: relative; overflow-x: hidden}
 
 .about p {padding: 20px; line-height: 1.8}
 .about a {text-decoration: none}
-.about button {color: #81664A; background: none; padding: 8px 20px 6px; 
-                border: 4px solid #81664a; font-weight: bold}
+.about button {color: #81664A; background: none; border: 4px solid #81664a; font-weight: bold; min-height: 40px; min-width: 180px}
 
 .services {padding-top: 50px; padding-bottom: 50px; display: table; min-height: auto}
 .services .alone {display: table-cell; vertical-align: middle}
@@ -39,7 +38,7 @@ body {font-family: "Roboto", sans-serif; position: relative; overflow-x: hidden}
 .services .service i {color: #95E1D3; margin-right: 20px}
 .services h5 {display:inline-block; font-size: 25px; line-height: 30px}
 .services a {text-decoration: none}
-.services button {margin-top: 40px; color: #952500; background: none; font-weight: bold; padding: 8px 20px 6px; border: 4px solid #952500}
+.services button {margin-top: 40px; color: #952500; background: none; font-weight: bold; border: 4px solid #952500; min-height: 40px; min-width: 180px}
 
 .lang {background: url("../images/back.png") no-repeat center center scroll; background-size: cover; background-color: #D4D4D4; 
     padding-top: 70px; padding-bottom: 30px}
@@ -65,14 +64,14 @@ body {font-family: "Roboto", sans-serif; position: relative; overflow-x: hidden}
 .career a {font-weight: bold; text-transform: uppercase; font-size: 0.9em}
 .career a > i {padding-right: 20px; color: #95E1D3}
 .career a > div > i {margin: auto; padding-top: 7px ; color: #777}
-.career .text-center button {margin-top: 40px; color: #E54C65; background: none; font-weight: bold; padding: 10px 35px; border: 4px solid #E54C65; border-radius: 0px}
+.career .text-center button {margin-top: 40px; color: #E54C65; background: none; font-weight: bold; border: 4px solid #E54C65; border-radius: 0px; min-height: 40px; min-width: 180px}
 .career .text-center .btn.focus, .career .text-center .btn:focus, .career .text-center .btn:hover {color: #e54c65}
 
 .download {padding-top: 70px; padding-bottom: 70px; display: table; min-height: auto}
 .download .alone {display: table-cell; vertical-align: middle}
 .download h4 {font-weight: 500; font-size: 20px}
 .download h3 {font-weight: bold}
-.download .row button {margin-top: 40px; color: #E54C65; background: none; font-weight: bold; padding: 8px 20px 6px; border: 4px solid #E54C65; min-width: 180px; min-height: 45px; border-radius: 0px}
+.download .row button {margin-top: 40px; color: #E54C65; background: none; font-weight: bold; border: 4px solid #E54C65; min-width: 180px; min-height: 40px; border-radius: 0px}
 .download .row a:hover {text-decoration: none}
 
 .contact {background: url("../images/Group-8.png") no-repeat center center fixed; background-size: cover}
@@ -83,9 +82,9 @@ body {font-family: "Roboto", sans-serif; position: relative; overflow-x: hidden}
 .contact .rightloc {padding: 40px 60px}
 .contact .rightloc h4 {font-weight: bold; margin-bottom: 30px}
 .contact p {display: inline; font-size: 1.2em}
-.contact button {margin-top: 40px; color: #4A6666; background: none; font-weight: bold; padding: 8px 10px 6px; border: 4px solid #4A6666; min-width: 315px; min-height: 40px}
+.contact button {margin-top: 40px; color: #4A6666; background: none; font-weight: bold; border: 4px solid #4A6666; min-width: 180px; min-height: 40px}
 .contact button:hover, .contact button:focus {color: #4a6666}
-.contact .copy {color:#4A6666; padding: 20px; margin: 30px}
+.contact .copy {color:#4A6666; margin-top: 40px; margin-bottom: 40px}
 
 #map {height: 400px}
 
