@@ -95,8 +95,12 @@ body {font-family: "Roboto", sans-serif; position: relative; overflow-x: hidden}
 
 .success {display: none}
 .fail {display: none}
-.success, .fail {position: fixed; left: 0; top: 0; width: 100%; height: 100%; font-size: 4em; line-height: 100%; background-color: rgba(255,255,255,0.7)}
-.success .above, .fail .above {position: fixed; top:45%; left: 45%}
+.success, .fail {position: fixed; left: 0; top: 0; width: 100%; height: 100%; font-size: 2em; line-height: 100%; background-color: rgba(255,255,255,0.7)}
+.success .above, .fail .above {margin: 0px; width: 50%; position: fixed; top: 50%; left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);}
 
 .bodyabout {font-family: "Roboto", sans-serif}
 .bodyabout .navbar {min-height: 100px; margin-bottom: 0; background:url("../images/Group-7.png"); border: none}
