@@ -88,6 +88,7 @@
 .contact button {margin-top: 40px; color: #4A6666; background: none; font-weight: bold; border: 4px solid #4A6666; min-width: 180px; min-height: 40px}
 .contact button:hover, .contact button:focus {color: #4a6666}
 .contact .copy {color:#4A6666; margin-top: 40px; margin-bottom: 40px}
+.contact .copy span {font-weight: bold}
 
 #map {height: 400px}
 

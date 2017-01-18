@@ -15,7 +15,7 @@ $(window).ready(function () {
             scrollup.hide();
         }
         //show&hide navbar with scroll
-        if ($(this).scrollTop() > 0) {
+        if ($(this).scrollTop() > 50) {
             $(".container-fluid").addClass("navbar-fixed-top");
             $(".navbar").css({"height": "50px"});
             $(".container-fluid").css({
