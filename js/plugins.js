@@ -6,60 +6,59 @@ $('body').scrollspy({ target: '.navbar' });
 $(window).ready(function () {
     "use strict";
     var scrollup = $("#scrollup");
-    //show&hide navbar with scroll
+    //scroll function
     $(window).scroll(function () {
+        //show&hide up button
         if ($(this).scrollTop() >= 500) {
             scrollup.show();
         } else {
             scrollup.hide();
         }
+        //show&hide navbar with scroll
         if ($(this).scrollTop() > 0) {
-            $(".head .navbar").addClass("navbar-fixed-top");
-            $(".head .navbar img").fadeIn(1000);
-            $(".head .navbar").css({
+            $(".container-fluid").addClass("navbar-fixed-top");
+            $(".navbar").css({"height": "50px"});
+            $(".container-fluid").css({
                 "background-color": "rgba(255,255,255,1)",
-                "box-shadow": "0 5px 10px rgba(0,0,0,0.5)"
+                "box-shadow": "0 5px 10px rgba(0,0,0,0.5)",
+                "padding-right": "30px",
+                "height": "50px"
             });
-            $(".bodymain .head .nav > li > a").addClass("dark");
-            $(".head").css("padding-top", "55.56px");
+            $(".navbar-brand > img").css({"height": "45px"});
+            $(".navbar-header button").css({"margin-top": "8px"});
+            $(".nav > li > a").css({
+                "color": "#000",
+                "line-height": "50px",
+                "padding-top": "0px",
+                "padding-bottom": "0px"
+            });
+            $(".navbar-toggle .icon-bar").css({"background-color": "#000"});
         } else {
-            $(".head .navbar").removeClass("navbar-fixed-top container");
-            $(".head .navbar img").fadeOut(1000);
-            $(".head .navbar").css("background-color", "transparent");
-            $(".head .navbar").css({
+            $(".container-fluid").removeClass("navbar-fixed-top");
+            $(".navbar").css({"height": "100px"});
+            $(".container-fluid").css({
                 "background-color": "transparent",
-                "box-shadow": "none"
+                "box-shadow": "none",
+                "padding-right": "15px",
+                "height": "100px"
             });
-            $(".bodymain .head .nav > li > a").removeClass("dark");
-            $(".head").css("padding-top", "0px");
+            $(".navbar-brand > img").css({"height": "80px"});
+            $(".navbar-header button").css({"margin-top": "30px"});
+            $(".nav > li > a").css({
+                "color": "#fff",
+                "line-height": "70px",
+                "padding-top": "10px",
+                "padding-bottom": "10px"
+            });
+            $(".navbar-toggle .icon-bar").css({"background-color": "#fff"});
         }
     });
-    //show&hide up button
+    //up button effect
     scrollup.click(function () {
         $("html,body").animate({ scrollTop : 0 }, 800);
     });
 });
-//window resize scrollify toggle and setting height manually for scrollify sections.
-$(window).resize(function () {
-    "use strict";
-    if ($(window).width() < 1200) {
-        $.scrollify.disable();
-        $(".about, .services, .lang, .Industries, .download").css({"height": "auto"});
-    } else {
-        $.scrollify.enable();
-        $(".about, .services, .lang, .Industries, .download").css({"height": $(window).height()});
-    }
-    
-});
 
-//window scrollify toggle and setting height manually for scrollify sections. (upon opening)
-if ($(window).width() < 1200) {
-    $.scrollify.disable();
-    $(".about, .services, .lang, .Industries, .download").css({"height": "auto"});
-} else {
-    $.scrollify.enable();
-    $(".about, .services, .lang, .Industries, .download").css({"height": $(window).height()});
-}
 //send apply page
 var apply = function () {
     "use strict";

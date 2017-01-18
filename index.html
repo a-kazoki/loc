@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- for internet explorer -->
         <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- for first mobile -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
         <link rel="shortcut icon" href="images/myicon.ico">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -18,48 +18,35 @@
     
     <body class="bodymain" data-spy="scroll" data-target=".navbar" data-offset="0">
         
-    
-        
-        <!-- start of head -->
-        <section class="head scrolling">
-            <!-- navbar -->
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-                        </button>
-                        <img class="img-responsive" src="images/LOCA.jpg" alt="">
-                    </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a class="one" href="#about">about Us</a></li>
-                            <li><a class="two" href="#services">our services</a></li>
-                            <li><a class="one" href="#lang">language</a></li>
-                            <li><a class="two" href="#indus">industries</a></li>
-                            <li><a class="one" href="#career">careers</a></li>
-                            <li><a class="two" href="#download">downloads</a></li>
-                            <li><a class="one" href="#contact">contact us</a></li>
-                        </ul>
-                    </div>
+        <!-- start of navbar -->
+        <nav class="head navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=""><img class="img-responsive" src="images/LOCA.jpg" alt=""></a>
                 </div>
-            </nav>
-            <!-- heading -->
-            <div class="container">
-                <div class="row">
-                    <div class="heading">
-                        <div class="col-md-6">
-                            <img class="img-responsive" src="images/LOCA.jpg" alt="">
-                        </div>
-                        <div class="col-md-6 text-center">
-                            <h1>WELCOME <br>TO LOCADIFFERENT</h1>
-                        </div>
-                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="one" href="#about">About Us</a></li>
+                        <li><a class="two" href="#services">Our services</a></li>
+                        <li><a class="one" href="#lang">Language</a></li>
+                        <li><a class="two" href="#indus">Industries</a></li>
+                        <li><a class="one" href="#career">Careers</a></li>
+                        <li><a class="two" href="#download">Downloads</a></li>
+                        <li><a class="one" href="#contact">Contact us</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
+        </nav>
+ 
         <!-- start of about us -->
         <section class="about container scrolling" id="about">
             <div class="alone">
@@ -486,8 +473,29 @@
                     section : ".scrolling",
                     standardScrollElements: ".career",
                     setHeights: false,
+                    interstitialSection : ".head",
                 });
             });
+            //window resize scrollify toggle and setting height manually for scrollify sections.
+            $(window).resize(function () {
+                "use strict";
+                if ($(window).width() < 1200) {
+                    $.scrollify.disable();
+                    $(".about, .services, .lang, .Industries, .download").css({"height": "auto"});
+                } else {
+                    $.scrollify.enable();
+                    $(".about, .services, .lang, .Industries, .download").css({"height": $(window).height()});
+                }
+            });
+
+            //window scrollify toggle and setting height manually for scrollify sections. (upon opening)
+            if ($(window).width() < 1200) {
+                $.scrollify.disable();
+                $(".about, .services, .lang, .Industries, .download").css({"height": "auto"});
+            } else {
+                $.scrollify.enable();
+                $(".about, .services, .lang, .Industries, .download").css({"height": $(window).height()});
+            }
         </script>
         <script src="js/plugins.js"></script>
     </body>
