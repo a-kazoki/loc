@@ -11,16 +11,9 @@
 .head .navbar-brand > img {display: inline-block; height: 80px; width: auto}
 
 .head .nav .active .one {background-color: rgba(187,102,74,0.7)}
+.head .nav .active .one:hover {background-color: rgba(187,102,74,0.9)}
 .head .nav .active .two {background-color: rgba(255,160,0,0.7)}
-
-/*
-
-.head .nav > li .dark {color: #000}
-.head .nav > li > a:hover, .head .nav > li > a:focus {text-shadow: 1px 1px rgba(0,0,0,0.3); background: none}
-.head .nav .active .one {background-color: rgba(187,102,74,0.7)}
-.head .nav .active .two {background-color: rgba(255,160,0,0.7)}
-
-*/
+.head .nav .active .two:hover {background-color: rgba(255,160,0,0.9)}
 
 .about {padding-bottom: 70px; padding-top: 70px; display: table; min-height: auto}
 .about .alone {display: table-cell; vertical-align: middle}
